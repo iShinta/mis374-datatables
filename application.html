@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - Community-Based Equity Audit</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Content/site.css" rel="stylesheet"/>
+
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+
+        #legend {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            padding: 10px;
+            margin: 50px;
+            border: 3px solid #000;
+        }
+        #legend h3 {
+        margin-top: 0;
+        }
+        #legend img {
+        vertical-align: middle;
+        }
+
+        /*Google Geolocalization*/
+        #floating-panel {
+            position: absolute;
+            top: 100px;
+            left: 25%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Roboto','sans-serif';
+            line-height: 30px;
+            padding-left: 10px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+    <![endif]-->
+
+    <!-- DataTables -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <!-- End DataTables -->
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Community-Based Equity Audit</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                        <li><a href="/Markers/Create">New Asset</a></li>
+                        <li><a href="/Markers">My Assets</a></li>
+                        <li><a href="/Documentation">Documentation</a></li>
+                                    </ul>
+                <form action="/Account/LogOff" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="VzPvY-yfvcaF5za9eeRgSZko2cRf0BYdGkl39BIortKpGB-Dfhg1IyX3SPfjzu0C4Yzn5vbpfVifwCBhoyApe-EFT0Rz-2qSiOKXM0yChfS9dg2GWp_YDwmvWquWCWgIsc8hffbevmLfwvQaxGNDxQ2" />    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="/Manage" title="Manage">Hello ho.minhtri.bin@gmail.com!</a>
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+</form>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="margin-top: 50px;">
+
+
+
+<h2>Index</h2>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Users</div>
+    <table id="table_id" class="table">
+        <thead>
+            <tr>
+                <th>
+                    Email <i class="fa fa-fw fa-sort"></i>
+                </th>
+                <th>
+                    LastConnected <i class="fa fa-fw fa-sort"></i>
+                </th>
+
+                <th>Options</th>
+            </tr>
+        </thead>
+
+        <tbody>
+                <tr>
+                    <td>
+                        susan@s.com
+                    </td>
+                    <td>
+                        4/8/2017 6:23:38 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/03f738ce-4e6b-4317-812c-1d04ac23b841">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        jonathan.hojnacki@gmail.com
+                    </td>
+                    <td>
+                        4/8/2017 2:25:09 PM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/4349908a-117f-4b9a-b1cc-20d4fd951967">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        mis374map@gmail.com
+                    </td>
+                    <td>
+                        4/8/2017 2:59:00 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/75862f95-1d23-4df8-8987-c661968bca3a">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        s@s.com
+                    </td>
+                    <td>
+                        4/8/2017 5:27:46 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/8b8b6ef5-2368-4c55-bbd0-8af294f51bdc">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        sjake5915@gmail.com
+                    </td>
+                    <td>
+                        1/1/1900 12:00:00 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/9a9070d1-4d54-4696-88e4-63209618e424">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ho_minh_tri@yahoo.fr
+                    </td>
+                    <td>
+                        4/7/2017 6:35:32 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/9d3bea00-265c-4810-bd6b-717f71f2f386">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ho.minhtri.net@gmail.com
+                    </td>
+                    <td>
+                        1/1/1900 12:00:00 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/9f520569-afc6-4fc7-80e1-283e1ee1d2d7">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ho.minhtri.dev@gmail.com
+                    </td>
+                    <td>
+                        4/8/2017 6:03:51 PM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/d3c4179c-5a43-4fba-bb0c-1775340b2dcd">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        tgreen@austin.utexas.edu
+                    </td>
+                    <td>
+                        4/6/2017 4:49:09 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/e9c1b8b2-4257-4dbb-94c1-f30b09704a71">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        dreagmz@gmail.com
+                    </td>
+                    <td>
+                        4/8/2017 5:01:47 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/f20d1722-1824-4aa5-962f-083f6238aad6">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ho.minhtri.bin@gmail.com
+                    </td>
+                    <td>
+                        4/8/2017 11:54:39 AM
+                    </td>
+
+                    <td>
+
+                        <a href="/ApplicationUsers/Delete/f523102e-0c7a-4c8c-8161-3eaf94837f46">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#table_id').dataTable({
+            "lengthMenu": [3, 5, 10],
+            "pageLength": 5
+        });
+    });
+</script>
+        <hr />
+        <footer>
+            <p>&copy; 2017 - 2017 - Dr. Terrance Green. All rights reserved - <a href="/Home/About">About</a> - <a href="/Home/Contact">Contact</a> - Terms and Conditions - Sitemap</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-3.1.1.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+<script src="/Scripts/respond.js"></script>
+
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Chrome","requestId":"491b7005cf5348e9878c22c1a9cae1cf"}
+</script>
+<script type="text/javascript" src="http://localhost:35175/f50f96030c604c6a9e23339b51284059/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>
